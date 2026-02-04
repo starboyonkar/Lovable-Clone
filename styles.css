@@ -1,8 +1,165 @@
+/* Reset */
 * {
-
-padding:0;
-margin: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* Page background */
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #f8f9fb 0%,
+    #b6ccff 30%,
+    #ffb0df 65%,
+    #ff4f87 100%
+  );
+}
 
+/* Header */
+.header {
+  height: 72px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.logo>img {
+  width: 144.5px;
+  height: 22px;
+  padding: 0px 8px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* New badge */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.pill .new {
+  background: #2563eb;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Heading */
+.hero-inner h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.hero-inner p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Prompt box */
+.prompt-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f6f5f2;
+  padding: 16px 18px;
+  border-radius: 22px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+.prompt-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+.prompt-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.send {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #6b7280;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
