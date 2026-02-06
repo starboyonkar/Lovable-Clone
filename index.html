@@ -1,59 +1,535 @@
 <!doctype html>
+<!--
+  index.html — Lovable Clone
+  Purpose: Demo landing page with header, hero, "Discover templates" section, and footer.
+  Notes: Anchors and navigation added for demo; template cards use placeholder gradients for thumbnails.
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lovable Clone</title>
+    <title>
+      Lovable - Build apps and websites fast witn, AI | No code app builder
+    </title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="icon" href="FooterLogo.png" type="image/png" />
   </head>
   <body>
-    <body>
+    <!-- Header: site logo, primary navigation and CTA buttons -->
+    <header>
+      <div class="header-left">
+        <a href="/">
+          <img src="logowhite.svg" alt="Lovalble logo" />
+        </a>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="logoblack.svg" alt="Brand logo">
-    </div>
+        <nav>
+          <div class="solutions-container">
+            <p>Solutions <i class="fa-solid fa-angle-down"></i></p>
+            <div class="solutions-options" aria-hidden="true">
+              <div class="col">
+                <a href="#">Founders</a>
+                <a href="#">Product Managers</a>
+                <a href="#">Designers</a>
+                <a href="#">Marketers</a>
+                <a href="#">Sales</a>
+              </div>
+              <div class="col">
+                <a href="#">Prototyping</a>
+                <a href="#">Internal Tools</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Startups</a>
+              </div>
+            </div>
+          </div>
+          <div class="resources-container">
+            <p>Resources <i class="fa-solid fa-angle-down"></i></p>
+            <div class="resources-options">
+              <a href="#">Discover</a>
+              <a href="#">Blog</a>
+              <a href="#">Partners</a>
+            </div>
+          </div>
 
-    <nav class="nav">
-      <a href="#">Solutions</a>
-      <a href="#">Resources</a>
-      <a href="#">Enterprise</a>
-      <a href="#">Pricing</a>
-      <a href="#">Community</a>
+          <a href="#">Enterprise</a>
+          <a href="#">Pricing</a>
+          <a href="#">Community</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="mobile-nav-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="login-btn">Log in</button>
+        <button class="get-started-btn">Get Started</button>
+      </div>
+    </header>
+
+    <!-- Mobile nav (togglable) -->
+    <nav class="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <a href="#">Solutions</a>
+        <a href="#">Resources</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Pricing</a>
+        <a href="#">Community</a>
+        <hr />
+        <a href="#">Log in</a>
+        <a class="get-started-mobile" href="#">Get Started</a>
+      </div>
     </nav>
 
-    <div class="actions">
-      <button class="login">Log in</button>
-      <button class="cta">Get started</button>
-    </div>
-  </header>
+    <!-- Main / Hero: central hero image, headline, and input control -->
+    <main>
+      <img src="pulse.webp" alt="Lovalble logo gradient" />
 
-  <!-- Hero Section -->
-  <main class="hero">
-    <div class="hero-inner">
-
-      <div class="pill">
-        <span class="new">New</span>
-        <span>Introducing a smarter Lovable →</span>
+      <div class="main-content">
+        <a href="#">
+          <span>New</span>
+          <span>Introducing a smarter lovable</span>
+          <span><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <h1>Build something Lovable</h1>
+        <p>Create apps and websites by chatting with AI</p>
       </div>
 
-      <h1>Build something Lovable</h1>
-      <p>Create apps and websites by chatting with AI</p>
-
-      <div class="prompt-box">
-        <input
-          type="text"
-          placeholder="Ask Lovable to create a landing page for my..."
-        >
-        <div class="prompt-actions">
-          <button class="plan">Plan</button>
-          <button class="send">↑</button>
+      <div class="input-container-wrapper">
+        <div class="input-container">
+          <input type="text" placeholder="Ask Lovable...." />
+          <div class="input-options">
+            <div><i class="fa-solid fa-plus"></i></div>
+            <div class="extra-options">
+              <p>Plan</p>
+              <span class="voice-svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  width="100%"
+                  height="100%"
+                  class="shrink-0 size-5 relative z-10 h-5 w-5"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M10.25 20V4a.75.75 0 0 1 1.5 0v16a.75.75 0 0 1-1.5 0m8-2V6a.75.75 0 0 1 1.5 0v12a.75.75 0 0 1-1.5 0m-12-1V7a.75.75 0 0 1 1.5 0v10a.75.75 0 0 1-1.5 0m8-2V9a.75.75 0 0 1 1.5 0v6a.75.75 0 0 1-1.5 0m-12-1v-4a.75.75 0 0 1 1.5 0v4a.75.75 0 0 1-1.5 0"
+                  ></path>
+                </svg>
+              </span>
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </div>
         </div>
       </div>
+    </main>
 
-    </div>
-  </main>
+    <!-- Discover templates section
+          - Placed below the hero and above the footer
+          - Contains a heading, subtitle, a "View all" anchor, and a responsive grid of template cards
+        -->
+    <section class="templates-section">
+      <div class="templates-inner">
+        <div class="templates-header">
+          <div class="templates-title">
+            <h2>Discover templates</h2>
+            <p class="templates-sub">Start your next project with a template</p>
+          </div>
+          <a class="templates-viewall" href="#"
+            >View all <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
 
-</body>
+        <div class="templates-grid">
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #f4eee6, #e9e0d8)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Fecommerce-store-1-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Ecommerce Store Website Template</h5>
+            <p class="muted">Premium design for webstore</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #eae8e6, #ddd9d3)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Farchitect-portfolio-1-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Architect Portfolio Website Template</h5>
+            <p class="muted">Firm website & showcase</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #fbf6f2, #f3ece4)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fpub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev%2Fa8b116a9-20b6-43a8-ae91-693ba5a35c3b%2Fid-preview-172571d0--7410f81b-8218-4f2d-bb32-1ba1f84eabb2.lovable.app-1760028648399.png&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Personal blog</h5>
+            <p class="muted">Muted, intimate design</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #f6e9e0, #f0e0d6)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Fvesper-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Fashion blog</h5>
+            <p class="muted">Minimal, playful design</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #efe8e2, #e6ded7)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Fvisual-landing-page-1-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Visual Landing Page Website Template</h5>
+            <p class="muted">Showcase your company</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #f7f2ed, #f0e9e0)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Flifestyle-blog-3-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Lifestyle Blog</h5>
+            <p class="muted">Sophisticated blog design</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #fff3f9, #f6e7f2)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Fevent-platform-1-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Event Platform Website Template</h5>
+            <p class="muted">Find, register, create events</p>
+          </article>
+
+          <article class="template-card">
+            <div
+              class="thumb"
+              style="background: linear-gradient(120deg, #e9efe9, #dfe8df)"
+            >
+              <img
+                src="https://lovable.dev/_next/image?url=%2Ftemplates%2Fhobby-photographer-screenshot.webp&w=640&q=75"
+                alt="Template thumbnail"
+              />
+            </div>
+            <h5>Personal portfolio</h5>
+            <p class="muted">Personal work showcase</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover apps section (duplicate of templates layout) -->
+    <section class="templates-section apps-section">
+      <div class="templates-inner">
+        <div class="templates-header">
+          <div class="templates-title">
+            <h2>Discover apps</h2>
+            <p class="templates-sub">Explore what others are building</p>
+          </div>
+          <a class="templates-viewall" href="#"
+            >View all <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+
+        <div class="templates-grid">
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FUTlQnbzsMUe5xVCQW6aDkhtQUxs2%2Fsocial-1757627848363-Cover.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>Iconstack</h5>
+            <p class="muted">50,000+ Free SVG Icons</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FOSOuJfW3GTegj9Fly29hLVNloI93%2FScreenshot%202026-01-01%20at%207.10.14%E2%80%AFPM.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>ExamAi</h5>
+            <p class="muted">Create, grade, and analyze your e...</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FALj9BEIeZMXsfYd3hqMd972rzls2%2FHeading%20(1).png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>Attendflow</h5>
+            <p class="muted">Event marketing made simple</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2F1NRL1SXSq0PQLvkCcfkSUwAzKrN2%2F1.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>creativable</h5>
+            <p class="muted">All-in-one CRM, AI Assistant, tea...</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FUTlQnbzsMUe5xVCQW6aDkhtQUxs2%2FScreenshot%202025-11-24%20at%2015.50.14.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>Pilates Circle by Cult</h5>
+            <p class="muted">Move, full circle.</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2Fnn22w70E2jWKGpHvftbNLhoEVpY2%2Fheroimage-lovable.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>Opux AI</h5>
+            <p class="muted">Every successful app starts here</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FlFLQD4G4AdaKMu3Y2t61VEd6c0h2%2Flanding%20page.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>NeuroTunes AI</h5>
+            <p class="muted">Adaptive music streaming engine...</p>
+          </article>
+
+          <article class="template-card">
+            <div class="thumb">
+              <img
+                src="https://lovable.dev/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fgpt-engineer-file-uploads%2FUTlQnbzsMUe5xVCQW6aDkhtQUxs2%2FScreenshot%202025-11-24%20at%2015.21.52.png&w=384&q=75"
+                alt="App thumbnail"
+              />
+            </div>
+            <h5>Createspace</h5>
+            <p class="muted">AI Media Made Simple</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: multi-column links and language selector -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a class="footer-logo" href="#">
+            <img src="FooterLogo.png" alt="Lovable logo" />
+          </a>
+          <div class="footer-lang"><i class="fa-solid fa-globe"></i> EN</div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press & media</a></li>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Trust center</a></li>
+              <li><a href="#">Partnerships</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Student discount</a></li>
+              <li><a href="#">Founders</a></li>
+              <li><a href="#">Product Managers</a></li>
+              <li><a href="#">Designers</a></li>
+              <li><a href="#">Marketers</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Prototyping</a></li>
+              <li><a href="#">Internal Tools</a></li>
+              <li><a href="#">Connections</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Status</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Cookie settings</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Platform rules</a></li>
+              <li><a href="#">Report abuse</a></li>
+              <li><a href="#">Report security concerns</a></li>
+              <li><a href="#">DPA</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Apply to our expert program</a></li>
+              <li><a href="#">Hire a Lovable expert</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Code of conduct</a></li>
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">Reddit</a></li>
+              <li><a href="#">X / Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        const input = document.querySelector(".input-container input");
+        if (!input) return;
+
+        const phrases = [
+          "Ask Lovable to create a dashboard to...",
+          "Ask Lovable to build a web app...",
+          "Ask Lovable to create a prototype...",
+          "Ask Lovable to design the landing page of my...",
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let typingForward = true;
+        const TYPING_SPEED = 60; // ms per char
+        const DELETING_SPEED = 30;
+        const PAUSE_AFTER_TYPE = 1400;
+
+        function tick() {
+          const current = phrases[phraseIndex];
+          if (typingForward) {
+            charIndex++;
+            input.placeholder = current.slice(0, charIndex);
+            if (charIndex >= current.length) {
+              typingForward = false;
+              setTimeout(tick, PAUSE_AFTER_TYPE);
+              return;
+            }
+            setTimeout(tick, TYPING_SPEED);
+          } else {
+            charIndex--;
+            input.placeholder = current.slice(0, charIndex);
+            if (charIndex <= 0) {
+              typingForward = true;
+              phraseIndex = (phraseIndex + 1) % phrases.length;
+              setTimeout(tick, 250);
+              return;
+            }
+            setTimeout(tick, DELETING_SPEED);
+          }
+        }
+
+        // small delay before starting
+        setTimeout(tick, 700);
+      })();
+
+      // Mobile nav toggle and touch-friendly dropdowns
+      (function () {
+        const mobileToggle = document.querySelector(".mobile-nav-toggle");
+        const mobileNav = document.querySelector(".mobile-nav");
+        if (mobileToggle && mobileNav) {
+          mobileToggle.addEventListener("click", () => {
+            mobileNav.classList.toggle("open");
+            mobileNav.setAttribute(
+              "aria-hidden",
+              String(!mobileNav.classList.contains("open")),
+            );
+          });
+          // close when tapping outside
+          document.addEventListener("click", (e) => {
+            if (!mobileNav.classList.contains("open")) return;
+            if (
+              e.target.closest(".mobile-nav") ||
+              e.target.closest(".mobile-nav-toggle")
+            )
+              return;
+            mobileNav.classList.remove("open");
+            mobileNav.setAttribute("aria-hidden", "true");
+          });
+        }
+
+        // make dropdowns toggle on touch/click for small screens
+        function setupToggle(containerSelector) {
+          const container = document.querySelector(containerSelector);
+          if (!container) return;
+          container.addEventListener("click", (e) => {
+            // only toggle on small screens
+            if (window.innerWidth > 900) return;
+            container.classList.toggle("open");
+          });
+        }
+        setupToggle(".solutions-container");
+        setupToggle(".resources-container");
+      })();
+    </script>
+  </body>
 </html>
